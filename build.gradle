@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.8'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+}
+
+group = 'com.github.huml0g'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'org.apache.lucene:lucene-analyzers-nori:8.11.2'
+    implementation 'org.openkoreantext:open-korean-text:2.3.1'
+
+    implementation 'org.projectlombok:lombok'
+    testImplementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'com.google.code.gson:gson'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

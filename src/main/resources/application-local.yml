@@ -1,0 +1,4 @@
+es:
+  synonym-path: src/main/resources/dictionary/synonym.txt
+  stopword-path: src/main/resources/dictionary/stopword.txt
+  userdict-path: src/main/resources/dictionary/userdict_ko.txt
