@@ -5,12 +5,14 @@ import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class NoriCustomAnalyzerSupport {
 
     @Value("${es.synonym-path}")
